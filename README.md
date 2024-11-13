@@ -45,6 +45,8 @@ Notes
 
 # Technical Specification
 
+## Product class
+
 The template project contains `Product` domain java class.
 
 `Product` class defines a few fields that do not conform the json data file properties:
@@ -57,6 +59,8 @@ Note: You **must not** rename `Product` class fields.
 
 You can add methods to `Product` class if you need to.
 
+## Additional classes
+
 Please implement the following method in `ProductsReader` class:
 -  `List<Product> read()` - reads the content of the json file.
 
@@ -67,6 +71,9 @@ Please implement the following methods in `ProductQueries` class:
 | `getSubCategoriesOf`             | Returns all subcategories of the category given by its name                                                       |
 | `getSweetsWherePriceIsLowerThan` | Get all products that belong to subcategories of "sweets" category and the price is lower than provided parameter |
 | `getTheMostExpensiveProduct`     | Get the product that has the highest price                                                                        |
+
+
+# Testing
 
 The template repository contains an example `products.json` file located in `input` folder.
 
