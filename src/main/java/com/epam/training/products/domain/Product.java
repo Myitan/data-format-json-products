@@ -1,5 +1,6 @@
 package com.epam.training.products.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,8 +13,10 @@ import lombok.ToString;
 public class Product {
     private String name;
     private String producer;
+    @JsonProperty("amount")
     private int quantity;
     private String unit;
+    @JsonProperty("value")
     private double price;
     private String[] categories;
 
@@ -32,5 +35,4 @@ public class Product {
     public String getSubCategory() {
         return hasSubCategory() ? categories[1] : null;
     }
-
 }
