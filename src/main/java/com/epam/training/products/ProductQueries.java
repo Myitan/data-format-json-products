@@ -23,7 +23,7 @@ public class ProductQueries {
     public List<Product> getSweetsWherePriceIsLowerThan(double price) {
         List<Product> sweets = new ArrayList<>();
         for (Product product : products){
-            if (product.hasCategory() && "sweets".equals(product.getCategory()) && product.getPrice() < price){
+            if (product.hasCategory() && "sweets".equals(product.getCategory()) && product.hasSubCategory()  && product.getPrice() < price){
                 sweets.add(product);
             }
         }
